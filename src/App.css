@@ -1,22 +1,710 @@
-.App {
+.Appheader {
+  background-color: #282c34;
+  height: 50px;
+  padding: 8px;
+}
+.App-header h1{
+  display: inline;
+}
+
+.HomeDiv{
+  display: flex;
+  flex-direction: row;
+  min-height:100vh;
+  /* background: #000; */
+}
+
+.Campaigns{
+  margin-left: 15vw;
+  /* margin-right:0; */
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background: #1D2951; */
+}
+
+.Cdiv{
+  display:flex;
+  flex-wrap: wrap;
+  padding-left:10px;
+  /* background: #444; */
+  margin: 0 auto;
+  /* justify-content: space-around; */
+  width:85%;
+}
+
+.CampaignBg{
+  height: 117px;
+  /* background:url('./components/leaf.jpg') center center no-repeat; */
+  background-position: center center;
+  background-size: cover;
+}
+
+.Campaign{
+  width: 210px;
+  height: 230px;
+  background:#fff;
+  margin: 45px 5px;
+  border: 1px solid rgba(150,150,150,0.2);
+  /* overflow: auto; */
+}
+
+.camph{
+  width: 100%;
+  margin:0;
+  display: flex;
+  justify-content: flex-start;
+  padding:5px 5px;
+}
+
+.camph small{
+    color: white;
+    text-align: center;
+    background:#f5b914;
+    padding:7px 12px;
+    border-radius:50%;
+    margin-left: auto;
+    align-self: center;
+    font-weight: 500;
+}
+
+.cicon{
+  margin:0 5px;
+  display: inline-block;
+  background: #90A955;
+  padding:6px;
+  border-radius: 5px;
+  border-color: #708A50;
+} 
+
+.CampaignBox{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.Campaign:hover{
+  box-shadow: 2px 2px rgba(120, 120, 120, 0.1),
+              5px 5px rgba(150,150,150,0.1);
+}
+
+.navbar{
+  background: #1F2F16;
+  width:100vw;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  z-index:1;
+}
+.Navicons{
+  flex:1;
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+}
+.Navicons .avatarDiv{
+  margin-right: 5px;
+  float:left;
+}
+
+.linkC{
+  width:28px;
+  height:28px;
+  border:2px solid rgb(23, 34, 4);
+  border-radius:50%;
+  background:rgb(206, 241, 123);
+  padding:0px 0 0px 2px;
+}
+.linkC:hover{
+  /* background: rgb(255, 255, 255); */
+  border-color: #ffce42;
+  cursor: pointer;
+}
+#searchTop{
+  margin:0;
+  height:40px;
+  flex:1;
+  /* margin-right: 5px; */
+  border-radius: 2px;
+  border-right: 0;
+  /* background: rgba(32,33,22,0.5); */
+  background: rgba(150,150,150,0.1);
+  border-color: rgba(150,150,150,0.3);
+  color: #dfd;
+}
+#searchIcon{
+  width:35px;
+  background: rgba(150,150,150,0.1);
+  border-color: rgba(150,150,150,0.3);
+  padding:5px 5px 6px 5px;
+  border: 1px solid;
+  border-left:0;
+  border-color: rgba(150,150,150,0.3);
+}
+#searchIcon:hover{
+  cursor: pointer;
+}
+
+#logodiv{
+  display: flex;
+  flex:1;
+}
+#logodiv h5{
+  color: #c0ddad;
+  /* padding-top: 5px; */
+  margin-left: 10px;
+}
+/* .navbar li{
+  flex:1;
+} */
+
+ul li{
+  text-align: center;
+  list-style: none;
+}
+ul li a{
+  color: #c0ddad;
+}
+ul li a:hover{
+  background: rgba(0,0,0,.3);
+  color: #ffce42;
+  text-decoration: none;
+}
+
+.licons{
+  display: block;
+  visibility: visible;
+}
+
+
+.ltext{
+  margin:0;
+}
+
+.loadMore{
+  background:#90A955;
+  /* background: #eaf0ea; */
+  margin: 0 auto;
+  /* width:100vw; */
+  height: 40px;
+}
+
+.avatar{
+  display: inline;
+  margin-top: -5px;
+}
+#aname{
+  display: inline;
+  margin-right: 20px;
+  color: #fff;
+}
+
+h2{
+  margin-left: 20px;
+}
+
+.StartCampaign, .HomeDiv, .AccountDiv, .CampaignView, .LoginDiv{
+  padding-top: 56px;
+}
+
+
+
+nav h1{
+  color:#fff;
+  display: inline;
+  font-size: 1em;
+}
+
+.SideNav{
+  /* margin-right: 10px; */
+  /* width:15vw;
+  height: 100vh;
+  position: fixed;
+  background: #90A955;
+  border-right: 2px solid rgba(72, 124, 12, 0.3); */
+}
+.snToggle{
+  display:none;
+  visibility: hidden;
+}
+.snList{
+  display:block;
+  visibility:visible;
+  width:15vw;
+  height: 100vh;
+  position: fixed;
+  background: #90A955;
+  /* border-right: 2px solid rgba(72, 124, 12, 0.3); */
+}
+@media(min-width:751px){
+  .snList{
+    display:block !important;
+  }
+}
+
+#snControl{
+  font-size:2em;
+  color:#fff;
+  text-align: center;
+  flex:1;
+  display:none;
+  visibility: hidden;
+}
+.SideNav h5{
+  padding: 40px 0 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.SideNav ul{
   display: flex;
+  padding: 0;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.SideNav ul li{
+  color: #000;
+  padding:20px;
+  padding-left: 50px;
+  text-align: justify;
+  width: 100%;
 }
 
-.App-link {
-  color: #09d3ac;
+.SideNav ul li:hover{
+  color: #fff ;
+  background:rgba(0,20,0,0.3);
+  cursor: pointer;
+  text-shadow: 1px 1px rgba(0,0,0,.3);
+}
+
+.Campaign h6,.Campaign h4,.Campaign p{
+  margin: 0 10px;
+}
+.Campaign p{
+  font-size: 14px;
+  margin: 0 10px;
+  padding:0;
+  text-align:justify;
+}
+.Campaign h6{
+  color: #132A13;
+}
+.Campaign h6:hover{
+  color: #4F772D;
+  text-decoration: none;
+}
+
+.FormDiv{
+  width: 60vw;
+  margin-left: 10vw;
+}
+
+#rlficon{
+  margin:0 0px 0 20px;
+  width: 40px;
+  height:35px;
+}
+#rlfh1{
+  margin-bottom: 0px;
+}
+
+.jumbo{
+  margin:0 0px 0 0px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.1)),url('./images/planting.jpg');
+  /* background:url('./components/leaf.jpg') center center no-repeat; */
+  background-size: cover;
+  background-blend-mode: darken;
+  height: 50vh;
+  color:#fff;
+
+}
+.jumbo h1{
+  margin-top: 120px;
+  margin-left: 50px;
+  text-shadow: 2px 2px rgba(0,0,0,0.4);
+}
+.jumbo img{
+  width: 270px;
+}
+
+.jumbo h3{
+  text-align:justify;
+  max-width:800px;
+  margin:10vh auto 0 auto;
+  color: #eee;
+  padding: 0 20px;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+
+.HomeDiv h1{
+  /* width: 900px; */
+  padding-left:6vw;
+  margin:20px 0 10px 20px ;
+}
+
+/* Start Campaign Styles */
+.label{
+  display: block;
+}
+input{
+  padding: 10px;
+  width: 45vw;
+  height: 40px;
+  border: 1px solid rgba(150,150,150,0.3);
+  margin-bottom: 20px;
+}
+.my-img{
+  width:375px;
+  height:180px;
+}
+.mb-3{
+  width:45vw;
+}
+.finput{
+  width:375px;
+}
+.field{
+  width:50vw;
+}
+.timing{
+  margin: 50px 0;
+}
+.timing label{
+  display: block;
+  margin: 20px 10px 5px 0;
+}
+.timing small{
+  font-size: .9em;
+  color: #132A13;
+  margin: 0 5px 0 0;
+}
+
+#starts, #ends{
+  width: 25vw;
+  margin-right: 15px;
+}
+#stime,#etime{
+  width: 10vw;
+  /* margin-left:0; */
+}
+textarea{
+  width: 50vw;
+  height: 200px;
+}
+#sdesc{
+  width: 30vw;
+  max-height: 100px;
+}
+
+#desc{
+  margin-bottom: 50px;
+  min-height:60vh;
+}
+
+#cat{
+  width: 40vh;
+  margin-bottom: 80px;
+}
+
+#submit{
+  width:16vw;
+  margin-left: 45vw;
+  /* margin: 0 auto; */
+  height: 50px;
+  background: #68A357;
+  color: #fff;
+  border: 2px solid rgba(18, 95, 18, 0.2);
+  border-radius: 3px;
+  margin-bottom: 50px;
+}
+#submit:hover{
+  background: #68C357;
+}
+#abs{
+  text-align: left;
+  margin: 50px 20px;
+}
+
+.Fdiv{
+  margin-top:40px;
+  position: absolute;
+  width: 100vw;
+  background: rgb(7, 11, 0);
+  padding:0 0 5px 0;
+  color: #eee;
+}
+
+.Fdiv p{
+  text-align: center;
+}
+
+
+.AccountDiv ul{
+  display: flex;
+  flex-direction: row;
+  padding: 0 0;
+  background: #ddd;
+}
+.AccountDiv ul li{
+  flex:1;
+  font-size: 1.5em;
+}
+.AccountDiv ul li p{
+  color:#444;
+  text-align:center;
+  margin:2px 0 7px 0;
+
+}
+
+.CampaignView{
+  min-height: 100vh;
+  width: 70vw;
+  background: #fff;
+  margin-left: 15vw;
+  padding-bottom: 100px;
+}
+.cvheader{
+  width: 100%;
+  height: 30vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.1)),url('./components/leaf.jpg') center center no-repeat;
+  background-size: cover;
+}
+.cvheader h2{
+  padding-top: 11vh;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0,0,0,.6);
+}
+
+.cvrow{
+  margin: 30px 0;
+}
+
+.rbtn{
+  background: #90A955;
+  margin: 5px;
+  border-radius: 2px;
+  border:1px solid #708A50;
+}
+.cvdesc{
+  margin: 30px 0;
+}
+
+
+/* Comment Section Styles */
+.snippets{
+  /* background: #aaa; */
+  z-index:0;
+  margin: 0;
+  width: 70vw;
+}
+.comment-wrapper .panel-body {
+  /* width: 100%; */
+  max-height:650px;
+  /* overflow:auto; */
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+    border-radius: 50%;
+    margin-right:20px;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+.pull{
+  width:9vw;
+  margin-left: 35vw;
+  background: #90A955;
+  border-color: rgba(18, 95, 18, 0.2);
+}
+.pull:hover{
+  background: #68C357;
+  border-color: rgba(18, 95, 18, 0.2);
+}
+                                    
+/* End of Comment Section Styles */
+
+.LoginDiv{
+  min-height: 100vh;
+}
+
+
+@media(max-width:1150px){
+  .Cdiv{
+    justify-content: space-around;
+    margin: 0 0 0 5vw;
+  }
+  .Campaigns h1{
+    padding-left:0;
+    font-size: 2rem;
+  }
+  .navbar p{
+    display: none;
+    visibility: hidden;
+  }
+  .licons{
+    display: none;
+    visibility: hidden;
+  }
+  .avatar{
+    display: block;
+    margin:0 0 0 0;
+  }
+  .logodiv{
+    margin: 0;
+    flex: 3;
+  }
+  .SideNav ul li{
+    flex:1;
+    margin: 0;
+    padding: 3vh 10px;
+  }
+
+  #aname{
+    display: none;
+    visibility:hidden; 
+  }
+
+  #rlficon{
+    margin:0;  
+}
+  .jumbo{
+    height: 300px;
+  }
+
+}
+
+@media(max-width:750px){
+  .navbar p{
+    display: none;
+    visibility: hidden;
+  }
+.navbar button{
+  display: none;
+  visibility: hidden;
+}
+
+  .avatar{
+    display: block;
+    margin:2px 0 0 3px;
+  }
+  #logodiv{
+    margin: 0 5px 0 0;
+    flex: 1; 
+  }
+  #searchTop{
+    width:40px;
+    flex:2;
+  }
+  .Navicons{
+    flex:2;
+  }
+  #rlficon{
+    margin:0;
+    padding:0;
+    width:40px;
+  }
+  .snList{
+    display: block;
+    /* visibility: hidden; */
+    width:65%;
+  }
+  .snToggle{
+    display: block;
+    visibility: visible;
+    margin:5px;
+    padding:0 5px 2px 5px;
+    /* border-radius: 0; */
+    background-color: #90A955;
+  }
+  .snToggle img{
+    width:20px;
+    height:25px;
+  }
+
+  .snActive{
+    display: block;
+    visibility: visible;
+  }
+  #snControl{
+    display:block;
+    visibility: visible;
+  }
+  #logodiv h5{
+    display: none;
+    visibility: hidden;
+  }
+  #aname{
+    display: none;
+    visibility:hidden; 
+  }
+  .Campaigns{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .jumbo{
+    margin: 0;
+    width: 100vw;
+  }
+  .jumbo img{
+    background-position: center center;
+  }
+  .jumbo h3{
+    font-size: 1.2em;
+  }
+
+  #rlficon{
+    margin:0;  
+}
+.Campaign{
+  margin: 10vw;
+}
+
+input{
+  width: 60vw;
+}
+.my-img{
+  width:60vw;
+  height:180px;
+}
+.finput{
+  width:60vw;
+}
+.mb-3{
+  width:60vw;
+}
+.field{
+  width:65vw;
+}
+#bdesc, #desc{
+  width:60vw;
+  margin: 0px 0px 5px 5px;
+}
+
+#starts, #ends{
+  width: 45vw;
+}
+#stime,#etime{
+  /* margin-left: 12vw; */
+  width: 25vw;
+}
+#submit{
+  width: 30vw;
+  margin-left: 35vw;
+}
+
+.CampaignView{
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  margin-left: 0;
+}
+
 }
