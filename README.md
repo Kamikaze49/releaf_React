@@ -10,6 +10,7 @@ It is an event creation platform used to organize enviromnental protection activ
  * Google Sign in
  * Ability to track number of people registered for an event
  * Event Creation, Editing and Deletion
+ * Search Feature for events
 
 ## Setting Up
  * Clone this repo to your local computer
